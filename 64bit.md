@@ -10,9 +10,9 @@ sudo apt-get install -y doxygen geany vim ctags graphviz git terminator
 cd /tmp 
 wget http://www.openframeworks.cc/versions/v0.9.3/of_v0.9.3_linux64_release.tar.gz
 
-#extract (32bit) oF to target
-tar -C $target -xzf of_v0.9.3_linux_release.tar.gz 
-mv -i $target/of_v0.9.3_linux_release $target/oFv093/ 
+#extract (64bit) oF to target
+tar -C $target -xzf of_v0.9.3_linux64_release.tar.gz 
+mv -i $target/of_v0.9.3_linux64_release $target/oFv093/ 
 
 
 #run dependencies script (for openframeworks)
