@@ -1,9 +1,23 @@
 # xenial-config
-Configuration scripts for Ubuntu Xenial
+System configuration scripts for Ubuntu 16.04 (Xenial)
 
 # Script usage
-## 32bit
-Run the command `sh 32bit.md`
+## Ubuntu 32bit 
+For the 32bit version, run the command below
 
-## 64bit
-Run the command `sh 64bit.md`
+~~~ .shell
+
+
+wget https://raw.githubusercontent.com/BitSails/xenial-config/master/32bit.md && $(basename !#:1)
+
+~~~
+
+## Ubuntu 64bit
+For the 64bit version, run the command below **instead**
+
+~~~ .shell
+
+
+wget https://raw.githubusercontent.com/BitSails/xenial-config/master/64bit.md && $(basename !#:1)
+
+~~~
