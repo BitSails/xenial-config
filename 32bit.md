@@ -15,10 +15,15 @@ tar -C $target -xzf of_v0.9.3_linux_release.tar.gz
 mv -i $target/of_v0.9.3_linux_release $target/oFv093/ 
 
 
-#run dependencies script (for openframeworks)
 cd $target/oFv093/scripts/linux/ubuntu
-sudo ./install_dependencies.sh
 
+#fix 'error installing libgl1-mesa-dev-hwe-16.04'
+if [ "$#" == 1 && "$1" = "gl1" ]; then
+  sed -i '115s/.*/XTAG=""/' ./install_dependencies.sh
+fi
+
+#run dependencies script (for openframeworks)
+sudo ./install_dependencies.sh
 
 
 #run an example project to see if previous steps worked
