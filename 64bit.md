@@ -4,7 +4,7 @@ sudo apt-get upgrade
 
 #install doxygen, geany terminator, vim, ctags, graphviz, git
 target=$HOME
-sudo apt-get install -y doxygen geany vim ctags graphviz git terminator
+sudo apt-get install -y curl doxygen geany vim ctags graphviz git terminator
 
 # get openframeworks (64bit version)
 cd /tmp 
