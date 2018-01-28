@@ -8,7 +8,7 @@ For the 32bit version, run the command below
 ~~~ .shell
 
 
-wget https://raw.githubusercontent.com/BitSails/xenial-config/master/32bit.md && sh $(basename !#:1)
+wget https://raw.githubusercontent.com/BitSails/xenial-config/master/setup.sh && sh $(basename !#:1) 32
 
 ~~~
 
@@ -18,6 +18,6 @@ For the 64bit version, run the command below **instead**
 ~~~ .shell
 
 
-wget https://raw.githubusercontent.com/BitSails/xenial-config/master/64bit.md && sh $(basename !#:1)
+wget https://raw.githubusercontent.com/BitSails/xenial-config/master/setup.sh && sh $(basename !#:1) 64
 
 ~~~
