@@ -1,9 +1,15 @@
 #quick git setup
 
 #aliases
-alias gpush='git push origin master'
-alias gadd='git add'
-alias gcom='git commit'
+git config --global push.default matching  #so that 'git push' doesn't complain
+git config --global color.ui auto
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.cm 'commit -m'
+git config --global alias.st status
+git config --global alias.lg 'log --pretty="format:%ad %C(bold blue)%h%Creset %C
+(green)(%an)%Creset %C(dim yellow)\"%s\"" --date=short'
 
 #setup and clone repo
 if [ "$#" -gt 0 ] 
