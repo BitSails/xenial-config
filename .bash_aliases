@@ -37,3 +37,64 @@ else
 fi
 }
 
+
+gi() # a "cheap" way to put git aliases in bash_aliases
+{
+if [ "$#" -gt 0 ] ;then
+
+  if [ "$1" = "co" ] ;then
+   shift # "consume" first arg
+   git checkout "$@"
+  fi
+
+  if [ "$1" = "br" ] ;then
+   shift # "consume" first arg
+   git branch "$@"
+  fi
+
+  if [ "$1" = "ci" ] ;then
+   shift # "consume" first arg
+   git commit "$@"
+  fi
+
+
+  if [ "$1" = "cm" ] ;then
+   shift # "consume" first arg
+   git commit -m "$@"
+  fi
+
+
+  if [ "$1" = "st" ] ;then
+   shift # "consume" first arg
+   git status "$@"
+  fi
+
+
+  if [ "$1" = "lg" ] ;then
+   git log --pretty="format:%ad %C(bold blue)%h%Creset %C(green)(%an)%Creset %C(dim yellow)\"%s\"" --date=short
+  fi
+
+ if [ "$1" = "acm" ]  && [ "$#" -eq 2 ] ;then
+   echo acm 
+   shift # "consume" first arg
+   git add .
+   git commit -m "$@"
+  fi
+
+  if [ "$1" = "acmp" ]  && [ "$#" -eq 2 ] ;then
+   echo acm 
+   shift # "consume" first arg
+   git add .
+   git commit -m "$@"
+   git push origin master
+  fi
+
+else
+ printf "\e[0;91mERROR:\e[0m usage:  gi \e[1;34malias\e[0m args\n\n"
+ printf "\e[0;91m where alias = \e[1;34mco|br|ci|cm|st|lg|acm:\e[0m\n\n"
+fi
+}
+
+alias gt ='gi'
+alias g ='gi'
+
