@@ -95,6 +95,6 @@ else
 fi
 }
 
-alias gt ='gi'
-alias g ='gi'
+alias gt='gi'   
+alias g='gi'
 
